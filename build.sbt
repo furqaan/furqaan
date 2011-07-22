@@ -20,3 +20,5 @@ resolvers += "Sonatype OSS Snapshots" at "http://oss.sonatype.org/content/reposi
 seq(ProguardPlugin.proguardSettings :_*)
 
 proguardOptions += keepMain("com.github.furqaan.servlet.FurqaanServlet")
+
+libraryDependencies += "org.scalatest" % "scalatest_2.9.0" % "1.6.1" % "test"
