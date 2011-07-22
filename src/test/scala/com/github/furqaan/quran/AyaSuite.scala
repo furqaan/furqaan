@@ -16,13 +16,13 @@ class AyaSuite extends FunSuite with MustMatchers {
 	aya.text must not equal (null)
   }
   
-  test("first aya must equal بِسْمِ اللَّهِ الرَّحْمَٰنِ الرَّحِيمِ (bismillaahi-r-rahmaani-r-rahiim)") {
+  test("first aya text must equal بِسْمِ اللَّهِ الرَّحْمَٰنِ الرَّحِيمِ (bismillaahi-r-rahmaani-r-rahiim)") {
     val f = fixture
 	val aya = new Aya(((f.source \ "sura")(0) \ "aya")(0))
 	aya.text must equal ("بِسْمِ اللَّهِ الرَّحْمَٰنِ الرَّحِيمِ")
   }
   
-  test("last aya must equal مِنَ الْجِنَّةِ وَالنَّاسِ (mina-l-jinnati wa-n-naasi)") {
+  test("last aya text must equal مِنَ الْجِنَّةِ وَالنَّاسِ (mina-l-jinnati wa-n-naasi)") {
     val f = fixture
 	val aya = new Aya(((f.source \ "sura")(113) \ "aya")(5))
 	aya.text must equal ("مِنَ الْجِنَّةِ وَالنَّاسِ")
